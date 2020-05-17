@@ -1,0 +1,3 @@
+influxdb/data/*
+server/vendor
+server/.env

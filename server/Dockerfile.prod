@@ -1,0 +1,13 @@
+FROM golang:1.14
+
+ENV GO111MODULE=on
+ENV PORT=3000
+
+ENV GOPATH /go
+COPY . /go/src
+WORKDIR /go/src
+
+RUN go get ./...
+RUN go build
+
+CMD ["electric-monitor"]
